@@ -1,0 +1,35 @@
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;            
+    padding: 10px 20px;
+
+    max-width: 800px;   
+    margin: 0 auto;
+}
+
+nav {
+    font-size: 18px;
+}
+
+nav a {
+    margin-left: 5px;
+    color: black;
+}
+
+nav a:hover {
+    color: blueviolet;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 40px;
+  
+}
+
+footer {
+    text-align: center;
+    margin-top: 100px;
+}

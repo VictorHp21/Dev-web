@@ -1,0 +1,69 @@
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;            
+    padding: 10px 20px;
+    
+}
+
+nav {
+    font-size: 18px;
+}
+
+nav a {
+    margin-left: 5px;
+    color: black;
+}
+
+nav a:hover {
+    color: blueviolet;
+}
+
+body {
+ 
+    background-image: url(arquivos-necessarios-projetos-unes/arquivos-necessarios-projetos-unes/fundo.png);
+
+    background-repeat: repeat;
+    background: transparent;
+}
+
+
+
+
+section h2 {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    font-size: 40px;
+    
+}
+
+#banner {
+    padding-top: 0;
+    max-width: 800px;
+    margin: 40px auto 0 auto;
+    justify-content: center;
+    padding: 20px;
+    background: none;
+}
+
+#banner img {
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    margin: 0 auto;
+    background: none;
+}
+
+section#principal {
+    max-width: 800px;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 20px;
+  
+}
+
+footer {
+    text-align: center;
+    margin-top: 100px;
+}
