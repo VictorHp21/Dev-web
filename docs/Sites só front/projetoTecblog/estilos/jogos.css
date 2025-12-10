@@ -87,16 +87,67 @@ main{
     width: 95%;
 }
 
-#postagem2{
-    background-color: rgb(239, 129, 74);
-    
+.postagem iframe{
+    padding: 10px;
+    height: 400px;
+    width: 100%;
+}
+
+
+
+#jogos-recentes, #gtavi {
+  background-color: #fff;
+  width: 350px;
+  padding: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+#jogos-recentes h2, #gtavi h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    padding: 2px 7px;
+    background: rgb(210, 210, 210);
+}
+
+#jogos-recentes ul {
+  list-style: none; 
+  padding: 5px 4px;       
+  margin: 0;        
+  text-align: left; 
+}
+
+#jogos-recentes li {
+  padding: 5px 0; 
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+#jogos-recentes li:hover {
+  background-color: #f2f2f2;
+}
+
+#jogos-recentes img {
+    width: 100%;
+    display: none;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+#gtavi p{
+    padding: 10px;
+    font-size: 0.9em;
+    font-weight: bold;
 }
 
 #barra_lateral{
     margin-left: 40px;
     display: flex;
     flex-direction: column;
-    gap: 30px
+    gap: 330px
 }
 
 #barra_lateral p{
@@ -105,73 +156,16 @@ main{
 }
 
 
-#postagens_recentes,
-#categorias {
-  background-color: #fff;
-  width: 250px;
-  padding: 15px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-#postagens_recentes h2, #categorias h2 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1em;
-    padding: 2px 7px;
-    background: rgb(210, 210, 210);
-}
-
-#categorias ul {
-  list-style: none; 
-  padding: 5px 0;       
-  margin: 0;        
-  text-align: left; 
-}
-
-
-#categorias a{
-    color: #ffcc00;
-    }
-
-#categorias a:hover{
-    color: #333;
-    text-decoration: underline;
-}    
 
 
 
-.texto-curto{
-    padding: 10px;
-}    
 
-
-.texto-completo{
-    display: none;
-    padding: 10px;
-}   
-
-.leia_mais {
-  color: #ffcc00;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.leia_mais:hover {
-  text-decoration: underline;
-}
-
-#barra_lateral {
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
 
 footer{
-    width: 950px;
+    width: 1050px;
     margin: auto;
     background-color: rgb(193, 193, 193);
     text-align: center;
     padding: 10px 0;
     border-radius: 3px;
 }
-
-
-
