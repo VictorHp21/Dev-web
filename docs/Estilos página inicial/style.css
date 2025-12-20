@@ -15,22 +15,23 @@
     --font3: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     --font4: 'Press Start 2P', cursive;
 
-  --azul-escuro: #0e2235;     
-  --azul-médio: #1b4a68;      
-  --ciano-claro: #4fd2ff;    
-  --roxo-vibrante: #7a4bff;  
-  --rosa-pixel: #ff7ab8;      
-  --vermelho-mario: #e54545;  
-  --laranja-pêssego: #f5a05b; 
-  --amarelo-dourado: #ffce58; 
-  --verde-yoshi: #5fc467;     
-  --branco-suave: #f2e8de;    
+    --azul-escuro: #0e2235;
+    --azul-médio: #1b4a68;
+    --ciano-claro: #4fd2ff;
+    --roxo-vibrante: #7a4bff;
+    --rosa-pixel: #ff7ab8;
+    --vermelho-mario: #e54545;
+    --laranja-pêssego: #f5a05b;
+    --amarelo-dourado: #ffce58;
+    --verde-yoshi: #5fc467;
+    --branco-suave: #f2e8de;
 }
 
 
 body {
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 
@@ -46,7 +47,7 @@ video {
     /* fica atrás do conteúdo */
 }
 
-header {
+.card {
     text-align: center;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
@@ -57,13 +58,32 @@ header {
     -webkit-backdrop-filter: blur(10px);
 }
 
-header h1{
-    font-size: 1.2em;
+header h1 {
+    font-size: 1.4em;
     text-transform: uppercase;
     color: var(--branco-suave);
     font-family: var(--font4);
 }
-header h1:hover{
+
+header h1:hover {
+    color: var(--roxo-vibrante);
+}
+
+
+section {
+    height: auto;
+   /* width: 97%;*/
+    margin: 50px auto;
+}
+
+section h2{
+    text-transform: uppercase;
+    font-family: var(--font4);
+    color: var(--branco-suave);
+    font-size: 1.1em;
+}
+
+section h2:hover {
     color: var(--roxo-vibrante);
 }
 
@@ -81,6 +101,7 @@ li {
 }
 
 a {
+    margin: 10px;
     text-decoration: none;
     background: #007bff;
     color: white;
@@ -90,4 +111,88 @@ a {
 
 a:hover {
     background: #0056b3;
+}
+
+/*Container com os cards*/
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Faz os cards quebrarem linha se faltar espaço */
+  justify-content: center; /* Centraliza horizontalmente */
+  gap: 40px; /* Espaçamento entre os cards */
+  padding: 20px;
+}
+
+/*Card ui*/
+/* From Uiverse.io by gharsh11032000 */ 
+.card_ui{
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card_ui svg {
+  width: 48px;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card_ui:hover {
+  transform: rotate(-5deg) scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card_ui:hover .card__content {
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 1;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card__description {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+}
+
+.card_ui:hover svg {
+  scale: 0;
+  transform: rotate(-45deg);
+}
+
+/*imagem dentro do card*/
+
+.card__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
 }

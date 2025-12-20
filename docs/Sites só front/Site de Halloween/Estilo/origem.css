@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root{
+    --font1: 'Creepster', cursive;
+    --font2: Arial, Helvetica, sans-serif;
+    --font3: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    --cor0: rgb(255, 94, 0);
+    --cor1: #FF9A00;
+    --cor2: #000000;
+    --cor3: #881EE4;
+    --cor4: #2FA71C;
+}
+
+
+header {
+    
+    background-color: #FF6600;
+    
+    font-family: var(--font3);
+    color: white;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;  
+}
+
+nav > a {
+color: white;
+padding: 20px;
+text-decoration: none;
+
+}
+
+nav> a:hover {
+color: var(--cor2);
+transition-duration: 0.5s;
+}
+
+body{
+    background-image: url(halloween-background.jpg);
+    background-repeat:no-repeat ;
+    background-size: 100% auto;
+    background-attachment: fixed; 
+  
+}
+
+main {
+  
+    color: white;
+    font-family: var(--font1);
+    font-size: 1.7em;
+    text-align: center;
+    width: 800px;
+    margin-top: 58px;
+    margin-left: auto;
+    margin-right: auto;
+   
+    padding: 10px;
+}
+
+h1{
+    font-weight: bold; 
+    background: linear-gradient(to bottom, var(--cor2), var(--cor4)); 
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    color: transparent; 
+}
+
+h2 {
+    font-weight: bold; 
+    background: linear-gradient(to bottom, var(--cor2), var(--cor4)); 
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    color: transparent; 
+}
+
+h2:hover{
+    color: transparent; /* Deixa o texto transparente para o gradiente */
+  
+
+    background-clip: text;
+    text-shadow: 0 0 20px #17e60c, 0 0 30px #760276; /* Intensifica o brilho */
+    transform: translateY(-5px) rotate(-3deg); /* Move e inclina o texto */
+    transition: all 0.3s ease-in-out; /* Suaviza a transição */
+} 

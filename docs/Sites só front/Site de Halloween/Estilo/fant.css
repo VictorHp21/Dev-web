@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root{
+    --font1: 'Creepster', cursive;
+    --font2: Arial, Helvetica, sans-serif;
+    --font3: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    --cor0: rgb(255, 94, 0);
+    --cor1: #FF9A00;
+    --cor2: #000000;
+    --cor3: #881EE4;
+    --cor4: #2FA71C;
+}
+
+
+header {
+    
+    background-color: var(--cor0);
+    font-family: var(--font3);
+    color: white;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;  
+}
+
+nav > a {
+color: white;
+padding: 20px;
+text-decoration: none;
+
+}
+
+nav> a:hover {
+color: var(--cor2);
+transition-duration: 0.5s;
+}
+
+
+body{
+    min-height: 100vh;
+    background-color: black;
+    font-family: var(--font1);
+    color: var(--cor4);
+
+}
+
+
+
+
+h1{
+    text-align: center;
+    padding-top: 100px;
+    color: var(--cor4);
+    font-size: 3em;
+}
+
+.container {
+    display: grid;
+
+    height: 300px;
+    grid-template-columns:  500px 1fr ; 
+    gap: 20px; 
+    align-items: start; 
+    margin-bottom: 50px;
+}
+
+
+
+section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    height: 200px;
+    width: 600px;
+}
+
+section.inicio{
+    margin: auto;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+section.normal{
+    
+
+    margin-top: 58px;
+
+    margin-right: auto;
+    padding: 10px;
+    color: var(--cor4);
+    font-size: 1.5em;
+}
+
+section.normal > h2{
+    padding-bottom: 20px;
+}
+
+section.normal{
+    background-color: var(--cor2);
+    color: var(--cor4);
+   
+ 
+    font-size: 1.5em;
+    text-align: center;
+}
+
+section#text1{
+    justify-self: end;
+    flex-direction: column; 
+    justify-content: center; 
+  
+}
+section#text2{
+    display: flex;
+    justify-self: end;
+    flex-direction: column; 
+    justify-content: center; 
+  
+}
+
+
+
+section#img1{
+  background-image: url(fantasiasimg/vampiroimg.jpeg);
+  padding: auto;
+  width: 350px;
+  height: 300px;
+  background-position: center;
+  display: flex;
+  background-size: contain;
+  border-radius: 5px;
+  align-self: start;
+  background-attachment: fixed;
+ 
+}
+
+.container2 {
+   position: relative;
+    display: grid;
+    margin-top: 60px;
+    min-height: 100vh;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
+    
+}
+
+section#img2 {
+    background-image: url(fantasiasimg/zombiee.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    border-radius: 5px;
+    right: 0;
+    justify-self: end; 
+}
