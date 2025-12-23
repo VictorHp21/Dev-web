@@ -30,33 +30,34 @@ body {
 }
 
 header {
-  background: var(--OffWhite);
-  width: 100%;
-  height: 500px;
-  margin: 0;
-  padding: 0;
-  position: relative;
+    background: var(--OffWhite);
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    position: relative;
 }
 
 #topo {
-  position: relative;
-  background: var(--Dourado_fosco);
-  height: 12em;
-  min-height: 100px;
-  overflow: hidden;
+    position: relative;
+    background: var(--Dourado_fosco);
+    height: 12em;
+    min-height: 100px;
+    overflow: hidden;
 }
 
 
 #area-logo {
-  position: absolute;
-  background: url(../estilo/imagens/resort_a_noite.jpg) no-repeat left center;
-  background-size: cover;
-  width: 100%;
-  height: 200px;
-  top: 0;
-  left: 0;
-  z-index: 1;
+    position: absolute;
+    background: url(../estilo/imagens/resort_a_noite.jpg) no-repeat left center;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
+
 /*
 #logo_img {
     position: absolute;
@@ -70,69 +71,109 @@ header {
 */
 
 #logo_img {
-  position: absolute;
-  top: 15px;
-  left: 45px;
-  width: 160px;
-  height: auto;
-  z-index: 4;
-  filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.3));
+    position: absolute;
+    top: 15px;
+    left: 45px;
+    width: 160px;
+    height: auto;
+    z-index: 4;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
 }
 
-.logo a{
-	position: absolute;
-	top: 15px;
-	left: 15px;
-	z-index: 3;
-	background: url(../estilo/imagens/logo_resort_semFundo.png) no-repeat;
-	width: 151px;
-	height: 66px;
-	text-indent: -9000px;
+.logo a {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 3;
+
+    width: 151px;
+    height: 66px;
+    text-indent: -9000px;
 }
 
 
 #area-menu {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: url(../estilo/imagens/topo-imagem-lateral.png) no-repeat top center ;
-  background-size: cover;
-  width: 570px;
-  height: 200px;
-  z-index: 2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(../estilo/imagens/topo-imagem-lateral.png) no-repeat top center;
+    background-size: cover;
+    width: 570px;
+    height: 200px;
+    z-index: 2;
 }
 
-#conteudo-menu{
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  position: absolute;
-  top: 5px;
-  left: 150px;
+#conteudo-menu {
+    padding: 20px 30px;
+    position: relative;
+    z-index: 3;
+    color: var(--OffWhite);
 }
 
+#menu-locais {
+    width: 100%;
+    font-size: 0.9em;
+    color: #8b8448;
+}
+
+#menu-locais hr {
+    border: none;
+    border-top: 1px solid #b5ab56;
+    margin: 4px 0 4px 25px;
+}
+
+
+.linha-menu {
+    font-size: 1em;
+    text-transform: uppercase;
+    margin-left: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.locais {
+    padding: 10;
+    margin: 0;
+    word-spacing: 8px;
+}
+
+#reserva {
+    background: var(--Terracota);
+    color: var(--OffWhite);
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: var(--font1);
+    font-weight: 500;
+    transition: background 0.3s;
+}
 
 
 #navegacao {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  position: absolute;
-  top: 60px;
-  left: 2px;
+    margin-top: 12px;
+    padding: 0;
+    list-style: none;
+}
+
+#navegacao li {
+    display: block;
+    margin-left: 60px;
+    margin-right: 10px;
 }
 
 #navegacao a {
-  text-transform: uppercase;
-  font-size: 0.8em;
-  padding: 5px;
-  color: var(--OffWhite);
-  line-height: 30px;
-  text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    padding: 5px;
+    color: var(--OffWhite);
+    line-height: 30px;
+    text-decoration: none;
 }
 
 #navegacao a:hover {
-  color: var(--Dourado_fosco);
+    color: var(--Dourado_fosco);
 }
-
-
