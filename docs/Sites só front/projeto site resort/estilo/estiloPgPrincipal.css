@@ -23,10 +23,19 @@
     --Dourado_fosco: #C5A253;
 }
 
-
-body {
+*{
     margin: 0;
     padding: 0;
+}
+
+main {
+    flex: 1;
+}
+
+html, body {
+    background: url(../estilo/imagens/resort_a_noite.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
 }
 
 header {
@@ -140,8 +149,8 @@ header {
 }
 
 #reserva {
-    background: var(--Terracota);
-    color: var(--OffWhite);
+    background: var(--Palha);
+    color: black;
     border: none;
     padding: 6px 10px;
     border-radius: 4px;
@@ -150,6 +159,11 @@ header {
     font-family: var(--font1);
     font-weight: 500;
     transition: background 0.3s;
+}
+
+#reserva:hover {
+    background: var(--Dourado_fosco);
+    color: var(--OffWhite);
 }
 
 
@@ -176,4 +190,77 @@ header {
 
 #navegacao a:hover {
     color: var(--Dourado_fosco);
+}
+
+#conteudo-principal{
+    display: flex;
+    height: 300px;
+    text-align: center;
+    
+}
+
+#conteudo1{
+    width: 50%;
+    background: var(--Marfin);
+    padding: 10px;
+    font-family: var(--font1);
+}
+
+#conteudo1 h2{
+    color: var(--Terracota);
+    font-family: var(--font2);
+    font-size: 1.3em;
+    padding: 15px;
+}
+
+#conteudo2{
+    width: 50%;
+    background: var(--Palha);
+    padding: 10px;
+}
+
+#conteudo2 ul li{
+    display: flex;
+    align-items: flex-start;
+    margin: 8px 10px;
+    padding: 3px;
+    border-bottom: 1px solid var(--OffWhite);
+}
+
+#conteudo2 ul li h2{
+    color: var(--Terracota);
+    font-family: var(--font2);
+    font-size: 1em;
+    text-align: left;
+    padding: 2px;
+}
+
+#conteudo2 ul li p{
+    font-size: 0.8em;
+    font-family: var(--font1);
+    text-align: left;
+    margin-top: 5px;
+    margin: 0px 5px 0px 5px;
+}
+
+.texto-imagem{
+    text-align: left;
+    margin-left: 2px;
+}
+
+#conteudo2 ul img{
+    width: 15%;
+    display: flex;
+    align-items:center ;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+footer{
+    text-align: center;
+    padding: 5px;
+    background-color: #8b8448;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
