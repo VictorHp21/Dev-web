@@ -2,6 +2,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Great+Vibes&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap');
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +22,8 @@
     --font2: Arial, Helvetica, sans-serif;
     --font3: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     --font4: 'Press Start 2P', cursive;
+    --font5: 'Great Vibes', cursive;
+    --font6: 'Cormorant Garamond', serif;
 
     --azul-escuro: #0e2235;
     --azul-médio: #1b4a68;
@@ -163,6 +173,43 @@ a:hover {
   transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
+.card__content#Halloween{
+  background: #FF6600;
+  text-decoration: none;
+  font-family: var(--font1);
+}
+
+.card__content#Halloween p{
+  color: #000000;
+}
+
+.card__content#AnnaBella{
+  background: #bfbf96;
+  text-decoration: none;
+  font-family: var(--font5);
+}
+
+.card__content#tecblog{
+  background: #ffcc00;
+  text-decoration: none;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.card__content#resort{
+  background: #F2E7C9;
+  text-decoration: none;
+  font-family: var(--font5);
+}
+
+.card__title#resort-title{
+  font-family: var(--font5);
+}
+
+.card__content#resort p{
+  font-family: var(--font6);
+}
+
+
 .card_ui:hover .card__content {
   transform: translate(-50%, -50%) rotate(0deg);
   opacity: 1;
@@ -195,4 +242,81 @@ a:hover {
   height: 100%;
   object-fit: cover;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+
+
+
+#noticiasA{
+    background: #b10333;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+#noticiasA:hover {
+    background: #de003e;
+}
+
+#halloweenA{
+  font-family: var(--font1);
+    background: #881EE4;
+    color: #2FA71C;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+#halloweenA:hover{
+    background: #A45DFF;
+    color: black;
+}
+
+#anna{
+    font-family: var(--font5);
+    background: #ffffff;
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+#anna:hover{
+    background: black;
+    color: #bfbf96;
+}
+
+#tecA {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: #ffffff;
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+#tecA:hover{
+    background: black;
+    color: #ffcc00;
+}
+
+#resortA{
+    font-family: var(--font5);
+    background: #F8F5F0;
+    color: #C5A253;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+#resortA:hover{
+    background: #C5A253;
+    color: #F8F5F0;
+}
+
+.card#cursos{
+  font-size: 0.7em;
+  text-align: center;
+  font-family: var(--font4);
 }
