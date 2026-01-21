@@ -7,12 +7,12 @@
 
 :root{
     --cor0: #1DB954;
-    --cor1: #191414;
+    --cor1: #000000;
     --cor2: #FFFFFF;
     --cor3: #535353;
     --cor4: #B3B3B3;
-    --cor5: #242424;
-
+    --cor5: #181818;
+    --cor6: #121212;
 }
 
 .navbar {
@@ -22,6 +22,17 @@
 .nav-icons{
     width: 100%;
 
+}
+
+.nav-link{
+    color: var(--cor4);
+    font-weight: bold;
+}
+
+.nav-link:hover{
+    color: var(--cor2);
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
 
 .btn-spotify{
@@ -35,6 +46,7 @@
     justify-content: center;
     transition: all 0.3s ease;
     padding: 0;
+    flex-shrink: 0;
 }
 
 .btn-spotify i {
@@ -58,11 +70,15 @@
 .search-bar {
     background-color: var(--cor5);
     border-radius: 25px;
-    padding: 6px 12px;
+    padding: 2px 12px;
     border: 1px solid var(--cor3);
     width: 320px;
+    height: 50px;
     color: #fff;
     transition: all 0.3s ease;
+    min-width: 180px;
+    max-width: 400px;
+    flex-grow: 1;
 }
 
 .search-bar input {
@@ -80,4 +96,36 @@
 
 .search-bar:hover {
   border-color: #b3b3b3;
+}
+
+.search-bar i:hover{
+    color: var(--cor4);
+    transform: scale(1.08);
+    text-decoration: none;
+}
+
+.divisor {
+  width: 2px;
+  height: 24px; 
+  background-color: #fff; 
+  margin: 0 15px; 
+}
+
+.icon-download{
+    color: var(--cor2);
+}
+
+.btn-entrar{
+     background-color: var(--cor2);
+    border-radius: 50px;
+    width: 100px;
+    height: 50px;
+    font-weight: bold;
+}
+
+.btn-entrar:hover{
+    background-color: rgba(243, 240, 240, 0.963);
+    transform: scale(1.11, 1.05);
+    text-decoration: none;
+    transition: transform 0.2s ease;
 }
