@@ -97,20 +97,20 @@
                 </div>
 
 
-                  <!--menu dentro do botao hamburguer-->
-                    <div class="collapse navbar-collapse flex-column aling-items-start bg-black mt-2 p-3 d-md-none"
-                        id="nav-links">
-                        <ul class="navbar-nav w-100">
-                            <li class="nav-item"><a href="#" class="nav-link">Premium</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Suporte</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Baixar</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Instalar aplicativo</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Inscrever-se</a></li>
-                            <li class="nav-item mt-2">
-                                <button class="btn-entrar">Entrar</button>
-                            </li>
-                        </ul>
-                    </div>
+                <!--menu dentro do botao hamburguer-->
+                <div class="collapse navbar-collapse flex-column aling-items-start bg-black mt-2 p-3 d-md-none"
+                    id="nav-links">
+                    <ul class="navbar-nav w-100">
+                        <li class="nav-item"><a href="#" class="nav-link">Premium</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Suporte</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Baixar</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Instalar aplicativo</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Inscrever-se</a></li>
+                        <li class="nav-item mt-2">
+                            <button class="btn-entrar">Entrar</button>
+                        </li>
+                    </ul>
+                </div>
 
 
             </div>
@@ -118,13 +118,59 @@
     </header>
 
 
-    <section id="biblioteca">
-        <h3>Sua Biblioteca</h1>
-        <button class="btn-criar">
-            <i class="fa-solid fa-plus"></i>
-            Criar
-        </button>
-      
+    <section class="sidebar" id="biblioteca">
+        <div class="sidebar-top">
+            <h3>Sua Biblioteca</h3>
+            <button class="btn-criar">
+                <i class="fa-solid fa-plus"></i>
+                Criar
+            </button>
+        </div>
+
+        <div class="sidebar-scroll">
+             <div class="sidebar-playlist">
+            <h4>Crie sua primeira playlist</h4>
+            <p>É fácil, vamos te ajudar.</p>
+            <button class="btn-criar-play">
+                Criar playlist
+            </button>
+        </div>
+
+        <div class="sidebar-playlist" id="podcast">
+            <h4>Que tal seguir um podcast novo?</h4>
+            <p>Avisaremos você sobre novos episódios.</p>
+            <button class="btn-podcast">
+                Explore podcasts
+            </button>
+        </div>
+
+        </div>
+
+       
+        <!-- Rodapé da sidebar -->
+        <div class="sidebar-footer">
+            <div class="footer-links">
+                <a href="#">Legal</a>
+                <a href="#">Segurança e Centro de privacidade</a>
+                <a href="#">Política de privacidade</a>
+                <a href="#">Cookies</a>
+                <a href="#">Sobre anúncios</a>
+                <a href="#">Acessibilidade</a>
+            </div>
+
+            <div class="footer-extra">
+                <a href="#">Cookies</a>
+            </div>
+
+            <!-- Botão de idioma -->
+            <button class="btn-idioma">
+                <i class="fa-solid fa-globe"></i>
+                Português do Brasil
+            </button>
+        </div>
+
+
+
     </section>
 
     <!-- Optional JavaScript -->
