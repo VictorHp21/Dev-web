@@ -35,8 +35,20 @@
     transition: transform 0.3s ease;
 }
 
+.logo img{
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.logo img:hover{
+    box-shadow: 0 0 10px rgba(29, 185, 84, 0.6);
+    transform: scale(1.08);
+}
+
 .btn-spotify {
-    background-color: var(--cor3);
+    background-color: var(--cor6);
     border: none;
     border-radius: 50%;
     width: 45px;
@@ -57,7 +69,7 @@
 
 
 .btn-spotify:hover {
-    background-color: var(--cor4);
+    background-color: var(--cor5);
     transform: scale(1.08);
     box-shadow: 0 0 10px rgba(29, 185, 84, 0.6);
     text-decoration: none;
@@ -229,10 +241,12 @@ main h3 {
     font-weight: 700;
 }
 
-main h3:hover{
+main h3:hover {
     text-decoration: underline;
     cursor: pointer;
 }
+
+
 
 .conteudo-principal {
     padding: 18px 20px;
@@ -250,7 +264,8 @@ main h3:hover{
 
 /*cards*/
 
-.cards-container, .cards-artistas {
+.cards-container,
+.cards-artistas {
     padding: 5px 5px;
     display: flex;
     flex-wrap: wrap;
@@ -283,7 +298,7 @@ main h3:hover{
 .card p {
     color: var(--cor4);
     font-size: 13px;
-    
+
 }
 
 .card:hover {
@@ -312,14 +327,14 @@ main h3:hover{
 }
 
 #img-art img {
-  border-radius: 50%;
-  display: block;
+    border-radius: 50%;
+    display: block;
 }
 
 #img-art .btn-play {
-  position: absolute;
-  right: -10px;
-  bottom: -10px;
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
 }
 
 .card:hover .card-img img {
@@ -358,7 +373,86 @@ main h3:hover{
     cursor: pointer;
 }
 
+/*main footer*/
 
+.main-footer {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-top: 1px solid var(--cor3);
+    border-bottom: 1px solid var(--cor3);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 25px 30px 25px;
+    gap: 10px;
+}
+
+.main-footer h1 {
+    color: var(--cor2);
+    font-size: 16px;
+
+}
+
+.main-footer ul {
+    list-style: none;
+}
+
+.main-footer ul a {
+    text-decoration: none;
+    color: var(--cor4);
+}
+
+.main-footer ul a:hover {
+    text-decoration: underline;
+    color: var(--cor2);
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.icons-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.icons-footer a {
+    align-items: center;
+    text-align: center;
+}
+
+.icons-footer a:hover {
+    text-decoration: none;
+}
+
+.btn-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    color: var(--cor2);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    background-color: var(--cor5);
+}
+
+.btn-icon i {
+    color: var(--cor2);
+    font-size: 16px;
+    transition: transform 0.2s ease;
+}
+
+.btn-icon:hover{
+    background-color: var(--cor3);
+     transform: scale(1.07);
+     box-shadow: 0 0 10px rgba(29, 185, 84, 0.6);
+}
+
+/*footer do main -- pt copy*/
+
+.copy {
+    padding: 5px 20px;
+    color: var(--cor4);
+}
 
 
 /*Sidebar*/
