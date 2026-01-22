@@ -250,13 +250,14 @@ main h3:hover{
 
 /*cards*/
 
-.cards-container {
+.cards-container, .cards-artistas {
     padding: 5px 5px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-
+    margin-left: 15px;
 }
+
 
 .card {
     background-color: var(--cor6);
@@ -296,11 +297,29 @@ main h3:hover{
     overflow: hidden;
 }
 
+
 .card-img img {
     width: 100%;
     border-radius: 10px;
     display: block;
     transition: transform 0.3s ease;
+}
+
+.card-img#img-art {
+    position: relative;
+    border-radius: 50%;
+    overflow: visible;
+}
+
+#img-art img {
+  border-radius: 50%;
+  display: block;
+}
+
+#img-art .btn-play {
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
 }
 
 .card:hover .card-img img {
