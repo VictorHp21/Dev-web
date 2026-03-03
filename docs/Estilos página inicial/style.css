@@ -110,6 +110,11 @@ li {
     margin: 15px 0;
 }
 
+#obs{
+  color: var(--branco-suave);
+  font-family: var(--font4);
+}
+
 a {
     margin: 10px;
     text-decoration: none;
