@@ -1,0 +1,60 @@
+body{
+    background-color: black !important;
+    color: white !important;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+.main{
+    width: 700px;
+    margin: auto;
+    text-align: center;
+    margin-top: 40px;
+   
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h2{
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+p{
+    padding: 25px 0px 15px 0px;
+}
+
+
+.pagina{
+    display: none;
+}
+
+
+.pagina.active{
+    display: block;
+}
+
+img{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.pagination .page-link{
+    color: purple;
+    font-size: 15px;
+}
+
+.pagination .page-link:focus{
+    box-shadow: 0 0 5px purple;
+    border-color: purple;
+}
+
+.pagination .page-item :hover{
+    background-color: black;
+}
+
