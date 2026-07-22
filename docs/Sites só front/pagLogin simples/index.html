@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/cadastro</title>
+</head>
+
+<body>
+
+    <form action="" method="" id="cadastroForm">
+
+        <h1>Cadastro</h1>
+
+        Nome: <br><input type="text" name="nome" id="nome" placeholder="Seu nome:"> <br>
+        Email:<br> <input type="text" name="email" id="email" placeholder="Email:"> <br>
+        Senha:<br> <input type="password" name="senha" id="senha" placeholder="Senha:"> <br> <br>
+
+        <input type="submit" name="enviar" value="cadastrar">
+    </form>
+
+    <form action="" method="" id="loginForm">
+
+        <h1>Login</h1>
+        Email:<br> <input type="text" name="email" id="emailLogin" placeholder="Email:"> <br>
+        Senha:<br> <input type="password" name="senha" id="senhaLogin" placeholder="senha"> <br> <br>
+
+        <input type="submit" name="enviar" id="login" value="logar">
+    </form>
+
+    <script>
+
+        //pegando os forms e os colocando em variáveis
+        const cadastroForm = document.getElementById("cadastroForm");
+        const loginForm = document.getElementById("loginForm");
+
+        // executar o envio do formulário (CADASTRO)
+        cadastroForm.addEventListener("submit", async function (event) {
+
+            //impedir que a página recarregue
+            event.preventDefault();
+
+            // pegar os valores
+            const nome = document.getElementById("nome").value;
+            const email = document.getElementById("email").value;
+            const senha = document.getElementById("senha").value;
+
+            // criar um objeto (O Spring boot espera receber um JSON)
+
+            const usuario = {
+                nome: nome,
+                email: email,
+                senha: senha
+
+            };
+
+            // enviar para a API e aguardar resposta
+
+            // usar try para tratar erros do servidor(api)
+
+            try {
+
+                const resposta = await fetch("http://localhost:8080/user/cadastro", {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+
+                    body: JSON.stringify(usuario)
+                });
+
+                // verificar se deu certo
+
+                if (resposta.ok) {
+                    alert("Usuário cadastrado!")
+
+                    cadastroForm.reset();
+
+                    // salvar dados antes de redirecionar para exibir na proxima página
+                    sessionStorage.setItem("usuario", JSON.stringify(usuario));
+
+                    window.location.href = ("cadastrou.html");
+                } else {
+                    alert("Erro ao cadastrar!!!")
+                }
+
+            } catch (error) {
+                alert("não foi possível conectar com a API.");
+                console.log(error);
+            }
+
+
+
+        });
+
+        //LOGIN
+
+        loginForm.addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            const login = {
+                email: document.getElementById("emailLogin").value,
+                senha: document.getElementById("senhaLogin").value
+
+            };
+
+            // enviar para a API
+
+            try {
+                const resposta = await fetch("http://localhost:8080/user/login", {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+
+                    body: JSON.stringify(login)
+
+                });
+
+                if (resposta.ok) {
+                    alert("login efetuado com sucesso");
+
+                    loginForm.reset();
+
+                    sessionStorage.setItem("login", JSON.stringify(login));
+
+                    window.location.href = ("logou.html");
+                } else {
+                    alert("Email ou senha incorretos")
+                }
+
+            } catch (error) {
+                alert("não foi possível conectar com a API.");
+                console.log(error);
+            }
+
+
+        });
+
+
+
+
+    </script>
+
+</body>
+
+</html>

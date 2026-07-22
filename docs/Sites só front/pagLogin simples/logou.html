@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logou</title>
+</head>
+<body>
+
+    <h1>Login feito com sucesso</h1>
+
+    <p>Bem vindo: 
+        <span id="nome"></span> <br>
+    Email: 
+        <span id="email"></span>
+</p>
+
+    <script>
+        const login = JSON.parse(sessionStorage.getItem("login"));
+
+        document.getElementById("nome").textContent = login.nome;
+        document.getElementById("email").textContent = login.email;
+    </script>
+    
+</body>
+</html>
