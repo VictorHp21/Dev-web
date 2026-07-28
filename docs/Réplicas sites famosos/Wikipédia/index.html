@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikipédia</title>
+    <link rel="stylesheet" href="Estilos/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+    <aside id="menu-lateral">
+        <h2>Menu principal</h2>
+
+        <button class="btn-menu">
+            mover para a barra lateral
+        </button>
+
+        <hr>
+
+
+    </aside>
+
+    <header>
+        <nav>
+
+            <button id="abrir-menu">☰</button>
+
+            <img src="Estilos/wiki2.png" class="img-logo" alt="">
+
+            <form action="">
+                <div class="pesquisa">
+                    <span class="material-icons">search</span>
+                    <input type="text" placeholder="Pesquisar na Wikipédia">
+
+                </div>
+
+                <button>Pesquisar</button>
+            </form>
+
+
+
+            <div class="links-nav">
+                <a href="#">Doar</a>
+                <a href="#">Criar conta</a>
+                <a href="#">Iniciar sessão</a>
+            </div>
+
+
+
+        </nav>
+    </header>
+
+    <main>
+        <div class="container-principal">
+
+            <div class="nav-principal">
+                <div class="nav-esquerda">
+                    <a href="#" class="ativo">Página principal</a>
+                    <a href="#">Discussão</a>
+                </div>
+
+                <div class="nav-direita">
+                    <a href="#" class="ativo">Ler</a>
+                    <a href="#">Ver código fonte</a>
+                    <a href="#">Ver histórico</a>
+                    <span class="material-icons">more_vert</span>
+                </div>
+
+            </div>
+
+            <div class="cabecalho">
+                <div class="main-1">
+                    <h2>Boas-vindas à Wikipédia,</h2>
+                    <p>a <a href="#">enciclopédia livre</a>
+                        que todos podem <a href="#">editar</a>.
+                    </p>
+
+                </div>
+
+                <div class="main-2">
+                    <h2>1 178 828 <a href="#">artigos</a> em português</h2>
+
+                    <h2>7 549 <a href="#">editores ativos</a></h2>
+
+                    <div class="links-info">
+                        <a href="#">Ajuda</a>
+                        ·
+                        <a href="#">Índice</a>
+                        ·
+                        <a href="#">Perguntas</a>
+                        ·
+                        <a href="#">Políticas</a>
+                        ·
+                        <a href="#">Portais</a>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="topicos">
+
+                <a href="#">Arte</a>
+                <a href="#">Biologia</a>
+                <a href="#">Ciência</a>
+                <a href="#">Filosofia</a>
+                <a href="#">Física</a>
+                <a href="#">Geografia</a>
+                <a href="#">História</a>
+                <a href="#">Matemática</a>
+                <a href="#">Química</a>
+
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        const menu = document.getElementById("menu-lateral");
+        const botao = document.getElementById("abrir-menu");
+
+        botao.addEventListener("click", () => {
+            menu.classList.toggle("aberto");
+        });
+    </script>
+
+</body>
+
+</html>
