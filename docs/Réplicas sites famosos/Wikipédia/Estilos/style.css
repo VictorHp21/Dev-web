@@ -75,6 +75,9 @@ nav input{
     text-decoration: none;
 }
 
+.links-nav a:hover {
+    text-decoration: underline;
+}
 
 
 .img-logo{
@@ -82,6 +85,7 @@ nav input{
     width: 180px;
     padding: 5px;
 }
+
 
 
 
@@ -311,4 +315,74 @@ nav input{
 
 .topicos a:hover{
     text-decoration: underline;
+}
+
+.container-texto{
+    display: flex;
+    justify-content: space-between;
+    background-color: #eff6ee;
+}
+
+.img-cont{
+    float: right;
+    margin: 0 0 10px 15px;
+}
+
+.img-cont img{
+    height: 180px;
+    width: auto;
+    padding: 10px;
+}
+
+.artigo{
+    width: 50%;
+    padding: 10px;
+}
+
+.eventos{
+    width: 50%;
+    padding: 10px;
+    border-left: 1px solid #c8ccd1;
+}
+
+.compartilhar{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.compartilhar span{
+    font-weight: bold;
+}
+
+.compartilhar a{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    color: #030303;
+    text-decoration: none;
+}
+
+.compartilhar a:hover{
+    text-decoration: underline;
+}
+
+
+.img-do-dia p{
+    text-align: center;
+}
+
+.img-dia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-castle{
+    height: 600px;
+    width: 60%;
+    padding: 50px 50px 15px;
 }
