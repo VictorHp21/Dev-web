@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartão de perfil</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-info">
+                <h1 class="title">Seu Perfil</h1> <br>
+
+                <p id="curso"> </p>
+
+
+                <p id="cidade"> </p>
+
+                <p id="exp"> </p>
+
+                <p id="msg"> </p>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        window.alert("Preencha os seus dados a seguir!")
+
+        let nome = prompt("Qual seu nome: ")
+        let curso = prompt("Curso: ")
+        let cidade = prompt("Cidade: ")
+        let exp = prompt("Experiência: ")
+
+
+        let mensagem = 'Olá ' + nome + '<br>Bem vindo a este projeto'
+
+        document.getElementById('curso').innerHTML = 'Curso: ' + curso;
+        document.getElementById('cidade').innerHTML = 'Cidade: ' + cidade;
+        document.getElementById('exp').innerHTML = 'Experiência: ' + exp;
+        document.getElementById('msg').innerHTML = 'Olá ' + nome + '<br>Seja bem-vindo a este projeto!';
+    </script>
+
+
+</body>
+
+</html>
