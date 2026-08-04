@@ -1,0 +1,57 @@
+
+body {
+    background-color: black;
+    color: white;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 450px; 
+    background-color: #7306c7;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.form label{
+    width: 100%;
+    flex-direction: column;
+}
+
+.form input[type="text"],
+.form input[type="number"],
+.form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    font-size: 14px;
+}
+
+#btn{
+    height: 42px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#btn:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}

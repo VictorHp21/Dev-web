@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de compra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <form class="form">
+
+            <h1>Loja virtual</h1>
+
+            <label>
+                <span>Nome:</span>
+                <input type="text" id="nome">
+            </label>
+
+            <label>
+                <span>Idade:</span>
+                <input type="text" id="idade">
+
+            </label>
+            <label>
+                <span>Produto:</span>
+                <input type="text" id="prod">
+
+            </label>
+
+            <label>
+                <span>Preço:</span>
+                <input type="text" id="preco">
+
+            </label>
+            <label>
+                <span>Quantidade</span>
+                <input type="number" id="qtd">
+
+            </label>
+
+
+            <div class="cupom-container" id="checkedBox">
+                <p>Possui cupom?</p>
+                <label>
+                    <input type="radio" name="possui_cupom" value="sim"> Sim
+                </label>
+                <label>
+                    <input type="radio" name="possui_cupom" value="nao" checked> Não
+                </label>
+            </div>
+
+
+            <div class="pagamento-container">
+                <label for="forma-pagamento">Forma de pagamento:</label>
+                <select name="forma_pagamento" id="forma-pagamento">
+                    <option value="" disabled selected>Selecione uma opção</option>
+                    <option value="pix">Pix</option>
+                    <option value="debito">Cartão de Débito</option>
+                    <option value="credito">Cartão de Crédito</option>
+                    <option value="boleto">Boleto Bancário</option>
+                </select>
+            </div>
+
+            <button type="button" class="submit"  id="btn" onclick="efetuarCompra()">Comprar</button>
+
+        </form>
+
+
+
+    </div>
+
+    <div id="resultado">
+
+    </div>
+
+
+    <script>
+
+        function efetuarCompra() {
+            let nome = document.getElementById('nome').value
+            let idade = parseInt(document.getElementById('idade').value)
+            let produto = document.getElementById('prod').value
+            let preco = parseFloat(document.getElementById('preco').value)
+            let quantidade = parseInt(document.getElementById('qtd').value)
+            let opPagamento = document.getElementById('forma-pagamento').value
+
+
+            const radioSelecionado = document.querySelector('input[name="possui_cupom"]:checked');
+
+
+            const possuiCupom = radioSelecionado.value;
+
+            let desconto = 0;
+
+            var valorSemDesconto = preco * quantidade;
+
+            if (possuiCupom == 'sim') {
+                desconto = 0.1
+            }
+
+            if (opPagamento == 'pix') {
+                desconto = 0.15
+            }
+
+            if (idade < 18 && (opPagamento == 'credito' || opPagamento == 'debito')) {
+                alert('Menores não podem compar com cartão');
+                return;
+            }
+
+            let forma_pag = null;
+
+            if (opPagamento == 'pix' || opPagamento == 'debito') {
+                forma_pag = 'Pagamento à vista'
+            } else {
+                forma_pag = 'Pagamento a prazo'
+            }
+
+            var total = (preco - (preco * desconto)) * quantidade;
+
+
+
+
+            if (idade >= 18 && total > 0) {
+
+                document.getElementById('resultado').innerHTML = `
+                    Resultado da compra de ${nome}<br>
+                    Produto comprado: ${produto}<br>
+                    Quantidade: ${quantidade}<br>
+                    Valor sem desconto: R$ ${valorSemDesconto}<br>
+                    Desconto: ${desconto * 100}%<br>
+                    Valor final: R$ ${total}<br>
+                    Forma de pagamento: ${forma_pag}
+                    `;
+
+            } else {
+                window.alert('Erro na forma de pagamento')
+            }
+
+
+
+
+        }
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
