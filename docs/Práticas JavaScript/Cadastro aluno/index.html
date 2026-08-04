@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro aluno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <form class="form">
+            <p class="title">Cadastro Aluno </p>
+            <div class="flex">
+                <label>
+                    <input class="input" type="text" id="nome" placeholder="" required="">
+                    <span>Nome</span>
+                </label>
+
+                <label>
+                    <input class="input" type="text" id="sobrenome" placeholder="" required="">
+                    <span>Sobrenome</span>
+                </label>
+            </div>
+
+            <label>
+                <input class="input" type="number" id="idade" placeholder="" required="">
+                <span>Idade</span>
+            </label>
+
+            <label>
+                <input class="input" type="text" id="curso" placeholder="" required="">
+                <span>Curso</span>
+            </label>
+            <label>
+                <input class="input" type="number" id="nota" placeholder="" required="">
+                <span>Nota</span>
+            </label>
+            <button class="submit" onclick="cadastrar()">Enviar</button>
+
+        </form>
+
+    </div>
+
+
+    <script>
+
+
+        function cadastrar() {
+
+            let nome = document.getElementById('nome').value;
+            let sobrenome = document.getElementById('sobrenome').value;
+            let idade = Number(document.getElementById('idade').value);
+            let curso = document.getElementById('curso').value;
+            let nota = Number(document.getElementById('nota').value);
+
+            let situacao;
+
+            if (nota >= 6) {
+                situacao = "Aprovado";
+            } else {
+                situacao = "Reprovado";
+            }
+
+            let categoria;
+
+            if (idade >= 18) {
+                categoria = "Maior de idade";
+            } else {
+                categoria = "Menor de idade";
+            }
+
+            alert(
+                "Nome: " + nome + " " + sobrenome +
+                "\nIdade: " + idade +
+                "\nCurso: " + curso +
+                "\nNota: " + nota +
+                "\nSituação: " + situacao +
+                "\nCategoria: " + categoria
+            );
+        }
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
